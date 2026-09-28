@@ -13,3 +13,4 @@ analysis/
 *.zarr/
 *.npz
 *.bin
+build/
