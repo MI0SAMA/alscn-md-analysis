@@ -51,3 +51,15 @@ ALSCN_N1_REFERENCE=/path/to/reference.npz pytest -q tests/regression
 ```
 
 The q reference checks the A025/E0.050 legacy dynamic-neighbor summary. The N1 reference checks the first `R14p4_w2p5` grid fraction (41 of 576 cells reversed). These tests are skipped unless paths are supplied.
+
+## Direct source run on the GPU server
+
+If the server Python lacks `venv/ensurepip`, the package can run from the checkout using its existing system dependencies:
+
+```bash
+cd /home/yao/otf_qnep/alscn-md-analysis
+./scripts/build_native.sh
+./scripts/alscn-switch run /path/to/run.yaml --out /path/to/separate-analysis-dir
+```
+
+The C extension is built for the active Python interpreter and stays ignored by Git. This path does not install packages into the server's system Python.
