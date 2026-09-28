@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "alscn-switch"
+version = "0.1.0"
+description = "Streaming QC and local phase analysis for AlScN switching MD trajectories"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24", "PyYAML>=6", "matplotlib>=3.7", "ase>=3.22"]
+
+[project.optional-dependencies]
+test = ["pytest>=7", "ase>=3.22"]
+
+[project.scripts]
+alscn-switch = "alscn_switch.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+alscn_switch = ["_xyzstream.c"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

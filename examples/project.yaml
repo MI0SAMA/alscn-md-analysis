@@ -1,0 +1,2 @@
+project: AlScN_SRO_V0_1
+runs: [run_q.yaml, run_lambda.yaml]

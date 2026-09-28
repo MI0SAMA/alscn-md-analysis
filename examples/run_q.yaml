@@ -1,0 +1,10 @@
+run_id: A000_E0100
+structure:
+  name: A000
+  alpha1: 0.0
+  composition: {Al: 0.75, Sc: 0.25, N: 1.0}
+  natoms: 32768
+simulation: {temperature_K: 300, field_VA: 0.1, field_axis: z, dt_fs: 0.025, ensemble: c-only-npt}
+files: {trajectory: /path/to/traj_monitor.xyz, thermo: /path/to/thermo.out}
+analysis: {observable: q, threshold: 0.2, neighbor_cutoff_A: 3.5, frame_stride: 1, check_distances: true}
+qc: {thermo_interval_fs: 2.5, max_temperature_K: 2000, max_pe_jump_eV_atom: 0.5}

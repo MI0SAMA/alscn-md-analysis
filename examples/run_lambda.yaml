@@ -1,0 +1,7 @@
+run_id: A000_nucleus_Eminus0100
+structure: {name: A000, natoms: 32768}
+simulation: {field_VA: -0.1, temperature_K: 300, dt_fs: 0.025}
+files: {trajectory: /path/to/traj.xyz, thermo: /path/to/thermo.out}
+analysis: {observable: lambda, reference: /path/to/reference.npz
+  phase_grid: [24, 24], threshold: 0.5, frame_stride: 1}
+qc: {thermo_interval_fs: 2.5, max_temperature_K: 2000}

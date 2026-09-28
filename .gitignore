@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+.build/
+dist/
+.pytest_cache/
+analysis/
+*.xyz
+*.traj
+*.h5
+*.hdf5
+*.zarr/
+*.npz
+*.bin
